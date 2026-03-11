@@ -1,0 +1,322 @@
+/* ================================
+   RESET GENERAL
+================================ */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.6;
+}
+
+/* Evita que las imágenes se desborden */
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+header{
+  background:#8B0000;
+  color:white;
+  padding:15px 20px;
+  position:relative;
+  z-index:10;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav h2{
+  font-size:24px;
+}
+
+.nav nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.nav nav a:hover{
+  color:#ffe5e5;
+}
+
+/* ================================
+   HERO SLIDER
+================================ */
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* ocupa 80% de la altura de la ventana */
+  overflow: hidden;
+  margin-top: 20px; /* separa del header */
+}
+
+/* ===== Contenedor de imágenes ===== */
+.hero-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ===== Imágenes ===== */
+.hero-slider .slide {
+  position: absolute;
+  width: 100%;  /* cubre todo el ancho */
+  height: 100%; /* cubre toda la altura */
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 50%; /* 50% horizontal, 20% vertical (más hacia arriba) */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Imagen activa */
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+/* ===== Overlay degradado ===== */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+/* ===== Contenido del hero ===== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  margin-bottom: 25px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ===== Animación de aparición ===== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Botón externo ===== */
+.boton-externo {
+  display: inline-block;
+  background: #aa2b36;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.boton-externo:hover {
+  background: #e84118;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ================================
+   PRODUCTOS
+================================ */
+
+.productos{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.productos h2{
+  font-size:28px;
+  margin-bottom:30px;
+}
+
+/* cards */
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:6px;
+  width:280px;
+
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card img{
+  width:100%;
+  border-radius:6px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ================================
+   DOCUMENTOS
+================================ */
+
+.documentos{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.botones-doc{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.botones-doc button{
+  background:#8B0000;
+  color:white;
+  border:none;
+
+  padding:15px 25px;
+
+  border-radius:5px;
+  cursor:pointer;
+
+  font-weight:bold;
+
+  transition:0.3s;
+}
+
+.botones-doc button:hover{
+  background:#6a0000;
+}
+
+/* ================================
+   MISIÓN Y VISIÓN
+================================ */
+
+.seccion-mision-vision{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.seccion{
+  flex:1;
+  min-width:250px;
+
+  background:#f9f9f9;
+
+  padding:20px;
+
+  border-radius:8px;
+
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px 0;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:768px){
+
+  .nav{
+    flex-direction:column;
+  }
+
+  .nav nav{
+    margin-top:10px;
+  }
+
+  .hero{
+    height:260px;
+  }
+
+  .hero-content h1{
+    font-size:28px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .cards{
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
