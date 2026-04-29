@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --vinotinto-dark: #4a0404;   /* Nivel 1 - Alta Dirección */
+            --vinotinto-med: #630505;    /* Nivel 2 - Dirección */
+            --vinotinto-light: #800000;  /* Nivel 3 - Gerencia */
+            --rojo-claro: #a52a2a;       /* Nivel 4 - Jefaturas */
+            --operativo-bg: #fdf2f2;     /* Nivel 5 - Fondo Operativos */
+            --operativo-text: #5a0000;   /* Nivel 5 - Texto Operativos */
+        }
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #fdfdfd; margin: 0; padding: 20px; font-size: 11px; color: #333; }
+        
+        /* Cabecera con Logo */
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { width: 180px; height: auto; margin-bottom: 10px; }
+        
+        .org-wrapper { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        
+        /* Bloques de Niveles */
+        .box { padding: 10px 15px; border-radius: 4px; text-align: center; width: 190px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: relative; border: 1px solid rgba(255,255,255,0.1); }
+        .n1 { background: var(--vinotinto-dark); font-weight: bold; width: 280px; font-size: 14px; }
+        .n2 { background: var(--vinotinto-med); font-weight: bold; width: 230px; }
+        .n3 { background: var(--vinotinto-light); font-weight: bold; width: 200px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .n4 { background: var(--rojo-claro); font-size: 10px; }
+        .n5 { background: var(--operativo-bg); color: var(--operativo-text); border: 1px solid #eecaca; font-size: 10px; font-weight: 500; }
+
+        .row { display: flex; justify-content: center; gap: 12px; align-items: flex-start; width: 100%; margin-top: 20px; }
+        .column { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        
+        .staff-group { display: flex; gap: 5px; margin-top: 5px; }
+        .staff-box { background: #8e8e8e; color: white; padding: 4px 10px; border-radius: 3px; font-size: 9px; text-transform: uppercase; }
+        
+        .separator { width: 100%; border-bottom: 2px solid var(--vinotinto-dark); margin: 15px 0; opacity: 0.2; }
+        h3 { color: var(--vinotinto-dark); font-size: 11px; margin: 15px 0 5px 0; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- Logotipo de Nikolukas -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzlQ3gl_WPyT55sF4vTRtGhoTxM3AwDv5sxQ&s" alt="Logo Nikolukas" class="logo">
+    <div class="org-wrapper">
+        <div class="box n1">ALTA DIRECCIÓN<br><span style="font-weight:normal; font-size:0.8em;">Junta Directiva / Vicepresidencia</span></div>
+        <div class="box n2">GERENCIA GENERAL</div>
+        <div class="staff-group">
+            <div class="staff-box">Secretaría General</div>
+            <div class="staff-box">Asistente Adm.</div>
+            <div class="staff-box">Auxiliar Adm.</div>
+        </div>
+    </div>
+</div>
+
+<div class="separator"></div>
+
+<div class="row">
+    
+    <!-- COLUMNA PRODUCCIÓN -->
+    <div class="column">
+        <div class="box n3">Producción y Operaciones</div>
+        <div class="box n4">Director Producción</div>
+        <div class="box n4">Jefe de Producción</div>
+        <div class="box n4">Coord. Producción</div>
+        <div class="box n5">Pasteleros</div>
+        <div class="box n5">Aux. de Pastelería</div>
+        <div style="height: 10px; border-left: 1px solid #ccc;"></div>
+        <div class="box n4">Jefe de Operaciones</div>
+        <div class="box n4">Coord. Operaciones</div>
+        <div class="box n5">Operarios</div>
+        <div class="box n5">Aux. de Producción</div>
+    </div>
+
+    <!-- COLUMNA RRHH -->
+    <div class="column">
+        <div class="box n3">Recursos Humanos</div>
+        <div class="box n4">Director RRHH</div>
+        <div class="box n4">Jefe RRHH</div>
+        <div class="box n4">Coordinador RRHH</div>
+        <div class="box n5">Analista Nómina</div>
+        <div class="box n5">Resp. Nómina</div>
+        <div class="box n5">Resp. Contratación</div>
+        <div class="box n5">Resp. Afiliaciones</div>
+        <div class="box n5">Psicólogo Org.</div>
+    </div>
+
+    <!-- COLUMNA COMERCIAL -->
+    <div class="column">
+        <div class="box n3">Comercial y Mkt</div>
+        <div class="box n4">Director Comercial</div>
+        <div class="box n4">Jefe de Ventas</div>
+        <div class="box n4">Adm. de Ventas</div>
+        <div class="box n5">Asesores Comerciales</div>
+        <div style="height: 10px; border-left: 1px solid #ccc;"></div>
+        <div class="box n4">Director Marketing</div>
+        <div class="box n4">Líder Audiovisual</div>
+        <div class="box n5">Diseñador Gráfico</div>
+    </div>
+
+    <!-- COLUMNA FINANCIERA -->
+    <div class="column">
+        <div class="box n3">Financiera</div>
+        <div class="box n4">Director Financiero</div>
+        <div class="box n4">Jefe Contabilidad</div>
+        <div class="box n4">Coord. Contable</div>
+        <div class="box n5">Contador</div>
+        <div class="box n5">Auxiliar Contable</div>
+        <div style="height: 10px; border-left: 1px solid #ccc;"></div>
+        <div class="box n4">Jefe Cartera / Tesorería</div>
+        <div class="box n4">Coordinadores</div>
+        <div class="box n5">Auxiliares</div>
+    </div>
+
+    <!-- COLUMNA SOPORTE -->
+    <div class="column">
+        <div class="box n3">Soporte y Control</div>
+        <div class="box n4">HSEQ / Calidad</div>
+        <div class="box n4">Jefes y Coord.</div>
+        <div class="box n5">Auxiliar SST</div>
+        <div class="box n5">Analista / Aux. Calidad</div>
+        <div style="height: 10px; border-left: 1px solid #ccc;"></div>
+        <div class="box n4">Director Tecnología</div>
+        <div class="box n4">Jefe / Coord. TI</div>
+        <div class="box n5">Analista de Datos</div>
+        <div class="box n5">Auxiliar Soporte</div>
+    </div>
+
+</div>
+
+</body>
+</html>

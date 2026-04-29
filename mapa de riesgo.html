@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --vinotinto: #800000;
+            --borde: #000;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        th, td {
+            border: 1px solid var(--borde);
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .main-header {
+            background-color: var(--vinotinto);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .col-header {
+            background-color: var(--vinotinto);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .center { text-align: center; }
+        
+        /* Colores de Riesgo basados en la imagen */
+        .riesgo-medio { background-color: #ffff00; } /* Amarillo */
+        .riesgo-alto { background-color: #ffcc00; }  /* Naranja/Amarillo fuerte */
+        .riesgo-muy-alto { background-color: #ff9900; } /* Naranja */
+        
+        ul { margin: 0; padding-left: 15px; }
+        li { margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="8" class="main-header">Matriz de Riesgos Calidad</th>
+            </tr>
+            <tr class="col-header">
+                <th style="width: 12%;">PROCESO</th>
+                <th style="width: 20%;">CAUSA</th>
+                <th style="width: 15%;">RIESGO</th>
+                <th style="width: 15%;">EFECTO</th>
+                <th style="width: 8%;">PROBABILIDAD</th>
+                <th style="width: 8%;">IMPACTO</th>
+                <th style="width: 6%;">VALOR</th>
+                <th style="width: 16%;">CONTROL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Fila 1 -->
+            <tr>
+                <td class="center"><strong>Hornear</strong></td>
+                <td>
+                    <ul>
+                        <li>Temperatura inadecuada del horno</li>
+                        <li>Falla en termostato</li>
+                        <li>Error en tiempo de cocción</li>
+                    </ul>
+                </td>
+                <td class="center">Producto mal cocido o quemado</td>
+                <td>
+                    <ul>
+                        <li>Pérdida de materia prima</li>
+                        <li>Reclamos de clientes</li>
+                        <li>Pérdida económica</li>
+                    </ul>
+                </td>
+                <td class="center">3</td>
+                <td class="center">3</td>
+                <td class="center riesgo-medio">9</td>
+                <td>
+                    <ul>
+                        <li>Calibración periódica del horno</li>
+                        <li>Uso de temporizadores</li>
+                        <li>Capacitación al personal</li>
+                        <li>Lista de verificación</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- Fila 2 (La que faltaba el color) -->
+            <tr>
+                <td class="center"><strong>Mezclado de ingredientes</strong></td>
+                <td>
+                    <ul>
+                        <li>Error en dosificación</li>
+                        <li>Balanza descalibrada</li>
+                        <li>Receta mal interpretada</li>
+                    </ul>
+                </td>
+                <td class="center">Producto fuera de especificación</td>
+                <td>
+                    <ul>
+                        <li>Cambios en sabor y textura</li>
+                        <li>Producto rechazado</li>
+                        <li>Insatisfacción del cliente</li>
+                    </ul>
+                </td>
+                <td class="center">4</td>
+                <td class="center">3</td>
+                <td class="center riesgo-alto">12</td>
+                <td>
+                    <ul>
+                        <li>Uso de recetas estandarizadas</li>
+                        <li>Calibración de balanzas</li>
+                        <li>Doble verificación</li>
+                        <li>Supervisión</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- Fila 3 -->
+            <tr>
+                <td class="center"><strong>Almacenamiento de materias primas</strong></td>
+                <td>
+                    <ul>
+                        <li>Humedad excesiva</li>
+                        <li>Mala rotación (PEPS)</li>
+                        <li>Contaminación cruzada</li>
+                    </ul>
+                </td>
+                <td class="center">Deterioro o contaminación de insumos</td>
+                <td>
+                    <ul>
+                        <li>Intoxicaciones alimentarias</li>
+                        <li>Pérdida de inventario</li>
+                        <li>Sanciones sanitarias</li>
+                    </ul>
+                </td>
+                <td class="center">3</td>
+                <td class="center">5</td>
+                <td class="center riesgo-muy-alto">15</td>
+                <td>
+                    <ul>
+                        <li>Control de temp. y humedad</li>
+                        <li>Aplicar método PEPS</li>
+                        <li>Etiquetado con fecha</li>
+                        <li>Inspecciones</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- Fila 4 -->
+            <tr>
+                <td class="center"><strong>Decoración y empaque</strong></td>
+                <td>
+                    <ul>
+                        <li>Manipulación inadecuada</li>
+                        <li>Uso de materiales no aptos</li>
+                        <li>Falta de higiene</li>
+                    </ul>
+                </td>
+                <td class="center">Contaminación del producto terminado</td>
+                <td>
+                    <ul>
+                        <li>Riesgos para la salud</li>
+                        <li>Devoluciones</li>
+                        <li>Daño reputacional</li>
+                    </ul>
+                </td>
+                <td class="center">2</td>
+                <td class="center">5</td>
+                <td class="center riesgo-alto">10</td>
+                <td>
+                    <ul>
+                        <li>Uso de guantes y EPP</li>
+                        <li>Capacitación en BPM</li>
+                        <li>Control de proveedores</li>
+                        <li>Supervisión final</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

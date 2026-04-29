@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --vinotinto: #800000;
+            --vinotinto-claro: #fdf2f2;
+            --borde: #333;
+            --gris-encabezado: #e2e2e2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .presupuesto-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: var(--vinotinto);
+            border-bottom: 2px solid var(--vinotinto);
+            padding-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        th {
+            background-color: var(--vinotinto);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--vinotinto-claro);
+        }
+
+        .categoria-title {
+            background-color: var(--gris-encabezado);
+            font-weight: bold;
+            color: var(--vinotinto);
+            text-align: center;
+        }
+
+        .total-row {
+            background-color: #333 !important;
+            color: white;
+            font-weight: bold;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .resumen-final {
+            background-color: var(--vinotinto);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presupuesto-container">
+    <h2>Presupuesto General - Nikolukas</h2>
+
+    <!-- SECCIÓN PRODUCCIÓN -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">1. DEP. PRODUCCIÓN (EQUIPOS E INSUMOS)</th>
+            </tr>
+            <tr style="background-color: #eee; color: #333;">
+                <th style="background-color: #eee; color: #333; width: 10%;">ID</th>
+                <th style="background-color: #eee; color: #333; width: 60%;">RECURSO</th>
+                <th style="background-color: #eee; color: #333; width: 30%;">VALOR ESTIMADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1-3</td><td>Hornos (Convección, Pisos, Rotatorio)</td><td class="text-right">$45.000.000</td></tr>
+            <tr><td>4-5</td><td>Mezclado (Amasadora y Batidora Industrial)</td><td class="text-right">$12.000.000</td></tr>
+            <tr><td>6-8</td><td>Procesamiento (Fermentadora, Laminadora, Divisora)</td><td class="text-right">$18.500.000</td></tr>
+            <tr><td>9-10</td><td>Refrigeración (Nevera Vertical y Congelador)</td><td class="text-right">$8.000.000</td></tr>
+            <tr><td>11-15</td><td>Mobiliario y Utensilios (Mesas, Moldes, Básculas)</td><td class="text-right">$7.500.000</td></tr>
+            <tr><td>16-25</td><td>Materia Prima Inicial (Harina, Levadura, Huevos, etc.)</td><td class="text-right">$12.000.000</td></tr>
+            <tr><td>26-30</td><td>Herramientas Menores (Termómetros, EPP)</td><td class="text-right">$1.200.000</td></tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL PRODUCCIÓN</td>
+                <td class="text-right">$104.200.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECCIÓN INFRAESTRUCTURA -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">2. DEP. INFRAESTRUCTURA Y ADECUACIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>41-42</td><td>Adecuación de Áreas (Producción y Almacén)</td><td class="text-right">$15.000.000</td></tr>
+            <tr><td>43-44</td><td>Campanas de Extracción y Lavamanos</td><td class="text-right">$6.000.000</td></tr>
+            <tr><td>45-47</td><td>Red de Gas, Iluminación y Trampas de Grasa</td><td class="text-right">$8.500.000</td></tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL INFRAESTRUCTURA</td>
+                <td class="text-right">$29.500.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECCIÓN PERSONAL -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">3. DEP. PERSONAL (MENSUAL)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>48</td><td>Maestro Panadero</td><td class="text-right">$2.800.000</td></tr>
+            <tr><td>49-51</td><td>Auxiliares (Panadería, Empaque, Aseo)</td><td class="text-right">$5.400.000</td></tr>
+            <tr><td>52-53</td><td>Administrador y Domiciliario</td><td class="text-right">$3.500.000</td></tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL PERSONAL</td>
+                <td class="text-right">$11.700.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECCIÓN LEGAL Y GESTIÓN -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">4. DEP. LEGAL Y GESTIÓN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>31-40</td><td>Trámites Legales (Cámara Comercio, BPM, Permisos)</td><td class="text-right">$4.550.000</td></tr>
+            <tr><td>54-60</td><td>Software y Estrategias de Gestión</td><td class="text-right">$4.300.000</td></tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL LEGAL Y GESTIÓN</td>
+                <td class="text-right">$8.850.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="resumen-final">
+        <strong>INVERSIÓN TOTAL ESTIMADA: $154.250.000 COP</strong>
+    </div>
+</div>
+
+</body>
+</html>

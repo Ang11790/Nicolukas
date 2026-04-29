@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --vinotinto: #800000;
+            --vinotinto-claro: #fdf2f2;
+            --borde: #000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .table-container {
+            width: 100%;
+            margin: auto;
+            border: 1px solid var(--borde);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        th {
+            background-color: var(--vinotinto);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--borde);
+        }
+
+        td {
+            border: 1px solid var(--borde);
+            padding: 6px;
+        }
+
+        .center { text-align: center; }
+        .right { text-align: right; }
+        
+        .merged-cell {
+            vertical-align: middle;
+            font-weight: bold;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .total-row {
+            background-color: #eeeeee;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) { background-color: var(--vinotinto-claro); }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Recurso</th>
+                <th>Actividad</th>
+                <th>Recurso (Detalle)</th>
+                <th>Tiempo (Horas)</th>
+                <th>Personal Responsable</th>
+                <th>Valor Unitario</th>
+                <th>Valor Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- FILA INICIAL CON ROWSPAN PARA LAS 50 ACTIVIDADES -->
+            <tr>
+                <td rowspan="50" class="merged-cell">Gestión de personal</td>
+                <td rowspan="50" class="merged-cell">Contratación de Personal - Nicolukas</td>
+                <td>Publicación vacante</td><td class="center">2</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$120.000</td>
+            </tr>
+            <!-- FILAS 2 A 45 (PREVIAS) -->
+            <tr><td>Revisión hojas de vida</td><td class="center">3</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$180.000</td></tr>
+            <tr><td>Entrevista inicial</td><td class="center">3</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$180.000</td></tr>
+            <tr><td>Entrevista técnica</td><td class="center">1</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$40.000</td></tr>
+            <tr><td>Evaluación psicológica</td><td class="center">1</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$40.000</td></tr>
+            <tr><td>Prueba práctica</td><td class="center">8</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$320.000</td></tr>
+            <tr><td>Tiempo RRHH</td><td class="center">4</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$220.000</td></tr>
+            <tr><td>Tiempo jefe área</td><td class="center">4</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$220.000</td></tr>
+            <tr><td>Papelería</td><td class="center">4</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$160.000</td></tr>
+            <tr><td>Contrato</td><td class="center">7</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$280.000</td></tr>
+            <tr><td>Examen médico</td><td class="center">2</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$110.000</td></tr>
+            <tr><td>Afiliación seguridad social</td><td class="center">4</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$280.000</td></tr>
+            <tr><td>Capacitación inicial</td><td class="center">1</td><td>Psicólogo</td><td class="right">$80.000</td><td class="right">$80.000</td></tr>
+            <tr><td>Uniforme</td><td class="center">4</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$280.000</td></tr>
+            <tr><td>Carnet</td><td class="center">2</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$110.000</td></tr>
+            <tr><td>Registro sistema</td><td class="center">6</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$240.000</td></tr>
+            <tr><td>Equipo de trabajo</td><td class="center">4</td><td>Médico laboral</td><td class="right">$90.000</td><td class="right">$360.000</td></tr>
+            <tr><td>Computador</td><td class="center">2</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$110.000</td></tr>
+            <tr><td>Correo corporativo</td><td class="center">1</td><td>Gerente</td><td class="right">$100.000</td><td class="right">$100.000</td></tr>
+            <tr><td>Inducción empresa</td><td class="center">5</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$300.000</td></tr>
+            <tr><td>Inducción seguridad</td><td class="center">8</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$480.000</td></tr>
+            <tr><td>Manual funciones</td><td class="center">4</td><td>Abogado</td><td class="right">$85.000</td><td class="right">$340.000</td></tr>
+            <tr><td>Firma documentos</td><td class="center">8</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$320.000</td></tr>
+            <tr><td>Tiempo administrativo</td><td class="center">5</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$200.000</td></tr>
+            <tr><td>Seguimiento ingreso</td><td class="center">5</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$200.000</td></tr>
+            <tr><td>Verificación referencias</td><td class="center">3</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$120.000</td></tr>
+            <tr><td>Aprobación gerencia</td><td class="center">6</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$240.000</td></tr>
+            <tr><td>Creación usuario</td><td class="center">6</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$240.000</td></tr>
+            <tr><td>Configuración sistema</td><td class="center">1</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$60.000</td></tr>
+            <tr><td>Entrega credenciales</td><td class="center">8</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$480.000</td></tr>
+            <tr><td>Capacitación software</td><td class="center">6</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$420.000</td></tr>
+            <tr><td>Entrega herramientas</td><td class="center">4</td><td>Auxiliar</td><td class="right">$35.000</td><td class="right">$140.000</td></tr>
+            <tr><td>Asignación puesto</td><td class="center">6</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$420.000</td></tr>
+            <tr><td>Bienvenida equipo</td><td class="center">4</td><td>Instructor</td><td class="right">$75.000</td><td class="right">$300.000</td></tr>
+            <tr><td>Evaluación desempeño inicial</td><td class="center">4</td><td>Instructor</td><td class="right">$75.000</td><td class="right">$300.000</td></tr>
+            <tr><td>Documentación legal</td><td class="center">8</td><td>Analista RRHH</td><td class="right">$55.000</td><td class="right">$440.000</td></tr>
+            <tr><td>Registro nómina</td><td class="center">1</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$40.000</td></tr>
+            <tr><td>Activación correo</td><td class="center">2</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$80.000</td></tr>
+            <tr><td>Política seguridad</td><td class="center">8</td><td>Sistemas</td><td class="right">$65.000</td><td class="right">$520.000</td></tr>
+            <tr><td>Capacitación HSEQ</td><td class="center">3</td><td>Sistemas</td><td class="right">$65.000</td><td class="right">$195.000</td></tr>
+            <tr><td>Registro biométrico</td><td class="center">6</td><td>Sistemas</td><td class="right">$65.000</td><td class="right">$390.000</td></tr>
+            <tr><td>Entrega manual</td><td class="center">7</td><td>Auxiliar</td><td class="right">$35.000</td><td class="right">$245.000</td></tr>
+            <tr><td>Seguimiento 1 semana</td><td class="center">1</td><td>Auxiliar</td><td class="right">$35.000</td><td class="right">$35.000</td></tr>
+            <tr><td>Seguimiento 1 mes</td><td class="center">7</td><td>Auxiliar</td><td class="right">$35.000</td><td class="right">$245.000</td></tr>
+            <tr><td>Retroalimentación</td><td class="center">6</td><td>Recursos Humanos</td><td class="right">$60.000</td><td class="right">$360.000</td></tr>
+            <!-- LAS ÚLTIMAS 5 FILAS CORREGIDAS -->
+            <tr><td>Archivo documentos</td><td class="center">5</td><td>HSEQ</td><td class="right">$70.000</td><td class="right">$350.000</td></tr>
+            <tr><td>Base datos empleados</td><td class="center">1</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$70.000</td></tr>
+            <tr><td>Comunicación interna</td><td class="center">6</td><td>Jefe área</td><td class="right">$70.000</td><td class="right">$420.000</td></tr>
+            <tr><td>Aprobación final</td><td class="center">3</td><td>Gerente</td><td class="right">$100.000</td><td class="right">$300.000</td></tr>
+            <tr><td>Cierre proceso</td><td class="center">6</td><td>Auxiliar RRHH</td><td class="right">$40.000</td><td class="right">$240.000</td></tr>
+
+            <!-- FILA DE SUMATORIAS -->
+            <tr class="total-row">
+                <td colspan="3" class="right">TOTAL GENERAL</td>
+                <td class="center">210</td>
+                <td>-</td>
+                <td class="right">-</td>
+                <td class="right">$11.895.000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
